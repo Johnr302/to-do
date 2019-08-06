@@ -7,6 +7,9 @@ body {
 }
 header {
   background-color: aqua;
+  position: relative;
+  font-size: 8px;
+  margin: 10px auto;
 }
 ul {
   list-style-type: none;
@@ -23,8 +26,11 @@ button {
 }
 html {
   padding-top: 25px;
-  /*background-image: url(images/bg_page.png);*/
 }
 footer {
   border: 3px solid black;
+  background-color: gray;
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
 }

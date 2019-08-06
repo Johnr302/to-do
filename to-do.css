@@ -2,5 +2,26 @@ html {
   font-family: Georgia, "Times New Roman", Times, serif;
 }
 body {
-  background-color: red;
+  background-color;
+}
+
+ ul {
+  list-style-type: none;
+ }
+
+#list {
+    border: 1px solid lightskyblue; 
+    width: 215px;
+}
+button {
+    box-align: left;
+    font-size: 15px;
+    margin: 10px auto;
+}
+html {
+    padding-top: 25px;
+    background-image: url(images/bg_page.png);
+}
+footer{
+    border: 3px solid black;
 }

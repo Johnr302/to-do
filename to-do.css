@@ -1,12 +1,17 @@
 @font-face {
   font-family: "ostrich_sansblack";
-  src: url("ostrich-sans-black-webfont.woff2") format("woff2"),
-    url("ostrich-sans-black-webfont.woff") format("woff");
+  src: url("ostrich-sans-black-webfont.eot");
+  src: url("ostrich-sans-black-webfont.eot?#iefix") format("embedded-opentype"),
+    url("ostrich-sans-black-webfont.woff2") format("woff2"),
+    url("ostrich-sans-black-webfont.woff") format("woff"),
+    url("ostrich-sans-black-webfont.ttf") format("truetype"),
+    url("ostrich-sans-black-webfont.svg") format("svg");
+
   font-weight: normal;
   font-style: normal;
 }
 html {
-  font-family: ostrich_sansblack;
+  font-family: "ostrich_sansblack", Georgia, "Times New Roman", Times, serif;
 }
 body {
   background-image: url(https://scontent-sjc3-1.cdninstagram.com/vp/07bd89e8ae5957176e23a91c1b50afa7/5D758BE1/t51.2885-15/sh0.08/e35/s640x640/13248728_1153806054663779_1739534564_n.jpg?_nc_ht=scontent-sjc3-1.cdninstagram.com);

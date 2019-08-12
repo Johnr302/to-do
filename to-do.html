@@ -9,9 +9,22 @@
     <header>
       <h1>Pjohn's to do list!</h1>
     </header>
-    <button>
-      New List
-    </button>
+    <div class="list-title">
+      <ul class="task-title">
+        <li class="active-list">Gym</li>
+        <li>Programming</li>
+        <li>Reading CSS book</li>
+      </ul>
+      <form action="">
+        <input
+          type="text"
+          class="new-list"
+          placeholder="New list name"
+          aria-label="New list name"
+        />
+        <button class="list-btn" aria-label="New List">+</button>
+      </form>
+    </div>
     <input placeholder="title" type="text" id="list-name" />
     <div id="list">
       <ul>
@@ -40,10 +53,8 @@
     <footer>
       <p>Created by Pjohn with guidance of D48!</p>
       <address>
-        <p>
-          Contact:
-          <a href="mailto:johnathon.regalado@gmail.com">Johnathon Regalado</a>
-        </p>
+        Contact:
+        <a href="mailto:johnathon.regalado@gmail.com">Johnathon Regalado</a>
       </address>
     </footer>
   </body>

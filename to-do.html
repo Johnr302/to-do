@@ -7,9 +7,9 @@
   </head>
   <body>
     <header>
-      <h1>Pjohn's to do list!</h1>
+      </h1> Pjohn's to do list!</h1>
     </header>
-    <div class="list-title">
+    <div class="all-list-title">
       <ul class="task-title">
         <li class="active-list">Gym</li>
         <li>Programming</li>
@@ -25,30 +25,54 @@
         <button class="list-btn" aria-label="New List">+</button>
       </form>
     </div>
-    <input placeholder="title" type="text" id="list-name" />
-    <div id="list">
-      <ul>
-        <li><input type="text" id="l1" /></li>
-        <li><input type="text" id="l2" /></li>
-        <li><input type="text" id="l3" /></li>
-        <li><input type="text" id="l4" /></li>
-        <li><input type="text" id="l5" /></li>
-        <li><input type="text" id="l6" /></li>
-        <li><input type="text" id="l7" /></li>
-        <li><input type="text" id="l8" /></li>
-        <li><input type="text" id="l9" /></li>
-        <li><input type="text" id="l10" /></li>
-        <li><input type="text" id="l11" /></li>
-        <li><input type="text" id="l12" /></li>
-        <li><input type="text" id="l13" /></li>
-        <li><input type="text" id="l14" /></li>
-        <li><input type="text" id="l15" /></li>
-        <li><input type="text" id="l16" /></li>
-        <li><input type="text" id="l17" /></li>
-        <li><input type="text" id="l18" /></li>
-        <li><input type="text" id="l19" /></li>
-        <li><input type="text" id="l20" /></li>
-      </ul>
+    <div class="list">
+      <div class="todo-header">
+        <h2 class="list-title">Gym</h2>
+        <p class="task-count"># of task remaining.</p>
+      </div>
+      <div class="todo-body">
+        <div class="todo-items">
+          <div class="items">
+            <input type="checkbox" id="item-1" />
+            <label for="item-1">
+              <span class="custom-checkbox"></span>
+              click me
+            </label>
+          </div>
+          <!-- close task 1-->
+          <div class="items">
+            <input type="checkbox" id="item-2" />
+            <label for="item-2">
+              <span class="custom-checkbox"></span>
+              click me
+            </label>
+          </div>
+          <!-- close task 2-->
+          <div class="items">
+            <input type="checkbox" id="item-3" />
+            <label for="item-3">
+              <span class="custom-checkbox"></span>
+              click me
+            </label>
+          </div>
+          <!-- close task 3-->
+        </div>
+        <div class="new-items">
+          <form action="">
+            <input
+              type="text"
+              class="new-list"
+              placeholder="New item name"
+              aria-label="New item name"
+            />
+            <button class="item-btn" aria-label="New Item">+</button>
+          </form>
+        </div>
+        <div class="delete-items">
+          <button class="delete btn">Clear complete items</button>
+          <button class="btn delete">Delete list</button>
+        </div>
+      </div>
     </div>
     <footer>
       <p>Created by Pjohn with guidance of D48!</p>

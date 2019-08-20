@@ -16,6 +16,7 @@
 }
 html {
   font-family: "ostrich_sansblack", Georgia, "Times New Roman", Times, serif;
+  max-width: 1200px;
 }
 body {
   background-color: rgb(25, 180, 220);
@@ -28,8 +29,8 @@ body {
 
 header {
   grid-area: header;
-  background-color: aqua;
-  margin: 10px auto;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.5);
 }
 ul {
   list-style-type: none;
@@ -63,4 +64,10 @@ footer {
 }
 .task-title {
   color: white;
+}
+@media (resolution: 750px) {
+  header {
+    color: yellowgreen;
+    font-size: 3em;
+  }
 }

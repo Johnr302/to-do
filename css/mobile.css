@@ -10,10 +10,10 @@ body {
   font-size: 3em;
 }
 .all-list-title {
-  width: 750px;
+  width: 100%;
 }
 .list {
-  width: 750px;
+  width: 100%;
 }
 footer {
   font-size: 0.25em;

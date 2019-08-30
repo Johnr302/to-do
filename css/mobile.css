@@ -1,22 +1,18 @@
 header {
   color: yellowgreen !important;
-  font-size: 1em;
-}
-.auto-fit {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(750px, 1fr));
+  font-size: 1.75rem;
+  text-align: center;
 }
 body {
-  font-size: 3em;
+  font-size: 2em;
   background-color: rgb(19, 32, 209);
+  width: 100%;
 }
-
 .list,
 .all-list-title {
-  width: 100%;
+  width: 83%;
   color: yellowgreen;
   letter-spacing: 0.25em;
-  padding: 3%;
 }
 footer {
   font-size: 0.25em;
@@ -24,24 +20,29 @@ footer {
 .new-list {
   border: solid yellow 5px;
   border-radius: 1em;
-  width: 80%;
-  /* height: 5em; */
+  width: 70%;
   font-size: 1em;
   padding-left: 10px;
-  margin-left: 5px;
-  margin-bottom: 10px;
 }
-.item-btn {
+.item-btn,
+.list-btn {
+  display: inline-block;
   position: relative;
-  width: 50px;
-  height: 50px;
+  border-radius: 10px;
   font-size: 0.75em;
-  padding-left: 10px;
   margin-left: -10px;
-  bottom: -15px;
-  background-color: red;
+  bottom: -5px;
+  background-color: yellowgreen;
+  text-align: center;
 }
+
 footer {
-  font-size: 1em;
-  width: 80%;
+  font-size: 0.7em;
+  width: 100%;
+}
+.delete.btn {
+  color: red;
+}
+.delete.btn:focus {
+  filter: hue-rotate(180deg);
 }

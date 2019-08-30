@@ -8,9 +8,12 @@ body {
   background-color: rgb(19, 32, 209);
   width: 100%;
 }
+.auto-fit {
+  display: block;
+}
 .list,
 .all-list-title {
-  width: 83%;
+  width: 100%;
   color: yellowgreen;
   letter-spacing: 0.25em;
 }
@@ -18,31 +21,44 @@ footer {
   font-size: 0.25em;
 }
 .new-list {
-  border: solid yellow 5px;
+  border: solid orange 5px;
   border-radius: 1em;
   width: 70%;
-  font-size: 1em;
+  font-size: 0.7em;
   padding-left: 10px;
 }
+.new-list:focus {
+  outline: none;
+}
+
 .item-btn,
 .list-btn {
   display: inline-block;
+  box-sizing: border-box;
   position: relative;
   border-radius: 10px;
-  font-size: 0.75em;
+  border-width: 3px;
+  border-color: orange;
+  font-size: 0.6em;
   margin-left: -10px;
-  bottom: -5px;
   background-color: yellowgreen;
   text-align: center;
 }
 
 footer {
-  font-size: 0.7em;
+  font-family: system-ui;
+  font-size: 14px;
   width: 100%;
+  background-color: transparent;
+  border-color: transparent;
+  color: white;
 }
 .delete.btn {
-  color: red;
+  color: orange;
 }
-.delete.btn:focus {
-  filter: hue-rotate(180deg);
+.delete.btn:active {
+  filter: hue-rotate(80deg);
+}
+address a {
+  color: yellowgreen;
 }

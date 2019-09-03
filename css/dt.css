@@ -67,8 +67,10 @@ button {
 }
 html {
   padding-top: 25px;
+  font-size: 1.2em;
 }
 footer {
+  font-family: system-ui;
   border: 0.5px solid rgba(0, 0, 0, 0.5);
   background-color: gray;
   position: relative;
@@ -76,7 +78,49 @@ footer {
   right: 5px;
   width: 260px;
   border-radius: 1em;
+  font-size: x-small;
 }
 .task-title {
   color: white;
+}
+form {
+  display: inline;
+}
+.item-btn,
+.list-btn {
+  display: inline-block;
+  box-sizing: border-box;
+  position: relative;
+  border-radius: 10px;
+  border-width: 2px;
+  border-color: black;
+  font-size: 0.6em;
+  margin-left: 10px;
+  background-color: yellowgreen;
+}
+.delete.btn {
+  /* color: orange; */
+  background-color: transparent;
+  border: none;
+}
+.delete.btn:active {
+  color: white;
+  transition: 1s;
+}
+/* .delete.btn:hover {
+  background-color: yellowgreen;
+  color: orange;
+} */
+
+.new-list:focus {
+  outline: none;
+}
+.new-items {
+  /* font-size: 1em; */
+}
+.new-list {
+  /* border: solid black 2px; */
+  border-radius: 1em;
+  font-size: 0.7em;
+  padding-left: 10px;
 }

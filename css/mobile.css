@@ -1,8 +1,9 @@
 header {
   color: yellowgreen !important;
-  font-size: 1.75rem;
+  font-size: 1.5rem;
   text-align: center;
 }
+
 body {
   font-size: 2em;
   background-color: rgb(19, 32, 209);
@@ -22,27 +23,7 @@ footer {
 }
 .new-list {
   border: solid orange 5px;
-  border-radius: 1em;
   width: 70%;
-  font-size: 0.7em;
-  padding-left: 10px;
-}
-.new-list:focus {
-  outline: none;
-}
-
-.item-btn,
-.list-btn {
-  display: inline-block;
-  box-sizing: border-box;
-  position: relative;
-  border-radius: 10px;
-  border-width: 3px;
-  border-color: orange;
-  font-size: 0.6em;
-  margin-left: -10px;
-  background-color: yellowgreen;
-  text-align: center;
 }
 
 footer {
@@ -53,12 +34,14 @@ footer {
   border-color: transparent;
   color: white;
 }
-.delete.btn {
-  color: orange;
-}
-.delete.btn:active {
-  filter: hue-rotate(80deg);
-}
 address a {
   color: yellowgreen;
+}
+.item-btn,
+.list-btn {
+  border-width: 4px;
+  border-color: orange;
+}
+.delete.btn {
+  color: orange;
 }

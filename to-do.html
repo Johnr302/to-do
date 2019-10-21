@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Pjohn's to do list!</title>
     <link rel="stylesheet" href="css/to-do.css" />
-    <!-- <script defer src="to-do.js"></script> -->
+    <script defer src="to-do.js"></script>
   </head>
   <body>
     <header>
@@ -14,15 +14,17 @@
     <div class="auto-fit">
       <div class="all-list-title">
         <ul class="task-title" data-lists>
-          <li class="list-name active-list">Gym</li>
+          <!-- <li class="list-name active-list">Gym</li>
           <li class="list-name">Programming</li>
-          <li class="list-name">Reading CSS book</li>
+          <li class="list-name">Reading CSS book</li> -->
         </ul>
         <button class="list-btn" aria-label="New List">+</button>
-        <form action="">
+
+        <form action="" data-new-list-form>
           <input
             type="text"
             class="new-list"
+            data-new-list-input
             placeholder="New list name"
             aria-label="New list name"
           />

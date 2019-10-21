@@ -1,11 +1,11 @@
-const listsContainer = document.queryCommandEnabled("[data-list]");
+const listsContainer = document.querySelector("[data-lists]");
 const newListForm = document.querySelector("[data-new-list-form]");
 const newListInput = document.querySelector("[data-new-list-input]");
-const deleteListButton = document.querySelector("data-delete-list-button");
+const deleteListButton = document.querySelector("[data-delete-list-button]");
 
 const LOCAL_STORAGE_LIST_KEY = "tasks.list";
 let selectedList = (LOCAL_SELECTED_LIST_ID_KEY = "task.selectedListId");
-let list = JSON.parse(localStorage.getItem(LOCAL_STORAGE_LIST_KEY)) || [];
+let lists = JSON.parse(localStorage.getItem(LOCAL_STORAGE_LIST_KEY)) || [];
 let selectedListId = localStorage.getItem(LOCAL_SELECTED_LIST_ID_KEY);
 
 listsContainer.addEventListener("click", e => {
@@ -16,7 +16,7 @@ listsContainer.addEventListener("click", e => {
 });
 
 deleteListButton.addEventListener("click", e => {
-  lists = list.filter(list => list.id !== selectedListId);
+  lists = lists.filter(list => list.id !== selectedListId);
   selectedListId = null;
   saveAndRender();
 });
@@ -27,13 +27,13 @@ newListForm.addEventListener("submit", e => {
   if (listName == null || listName === "") return;
   const list = createList(listName);
   newListInput.value = null;
-  listsContainer.push(list);
-  render();
+  lists.push(list);
+  saveAndRender();
 });
 
 let createList = name => {
   return {
-    id: Date.new().toString(),
+    id: Date.now().toString(),
     name: name,
     tasks: []
   };
@@ -45,17 +45,18 @@ let saveAndRender = () => {
 };
 
 let save = () => {
-  localStorage.setItem(JSON.stringify(lists));
+  console.log(lists);
+  localStorage.setItem(LOCAL_STORAGE_LIST_KEY, JSON.stringify(lists));
   localStorage.setItem(LOCAL_SELECTED_LIST_ID_KEY, selectedListId);
 };
 
 let render = () => {
   clearElement(listsContainer);
-  list.forEach(list => {
+  lists.forEach(list => {
     const listElement = document.createElement("li");
     listElement.dataset.listId = list.id;
     listElement.classList.add("list-name");
-    listElement.innerText = list;
+    listElement.innerText = list.name;
     if (list.id === selectedListId) {
       listElement.classList.add("active-list");
     }

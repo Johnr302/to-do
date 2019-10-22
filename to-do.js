@@ -73,8 +73,8 @@ let render = () => {
 let renderTaskCount = selectedList => {
   const incompleteItemCount = selectedList.tasks.filter(task => !task.complete)
     .length;
-  const itemString = incompleteItemCount === 1 ? "task" : "tasks";
-  listCountElement.innerText = `${incompleteItemCount} ${tasksString} remaining`;
+  const itemsString = incompleteItemCount === 1 ? "task" : "tasks";
+  listCountElement.innerText = `${incompleteItemCount} ${itemsString} remaining`;
 };
 
 let renderLists = () => {

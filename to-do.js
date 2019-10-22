@@ -6,7 +6,7 @@ const listDisplayContainer = document.querySelector(
   "[data-list-display-container]"
 );
 const listTitleElement = document.querySelector("[data-list-title]");
-const listCountElement = document.querySelector("[dat-task-count]");
+const listCountElement = document.querySelector("[data-task-count]");
 const itemsContainer = document.querySelector("[data-items]");
 
 const LOCAL_STORAGE_LIST_KEY = "tasks.list";

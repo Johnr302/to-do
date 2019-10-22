@@ -2,6 +2,12 @@ const listsContainer = document.querySelector("[data-lists]");
 const newListForm = document.querySelector("[data-new-list-form]");
 const newListInput = document.querySelector("[data-new-list-input]");
 const deleteListButton = document.querySelector("[data-delete-list-button]");
+const listDisplayContainer = document.querySelector(
+  "[data-list-display-container]"
+);
+const listTitleElement = document.querySelector("[data-list-title]");
+const listCountElement = document.querySelector("[dat-task-count]");
+const itemsContainer = document.querySelector("[data-items]");
 
 const LOCAL_STORAGE_LIST_KEY = "tasks.list";
 let selectedList = (LOCAL_SELECTED_LIST_ID_KEY = "task.selectedListId");
@@ -52,6 +58,26 @@ let save = () => {
 
 let render = () => {
   clearElement(listsContainer);
+  renderLists();
+
+  const selectedList = list.find(list => list.id === selectedListId);
+  if (selectedListId == null) {
+    listDisplayContainer.style.display = "none";
+  } else {
+    listDisplayContainer.style.display = "";
+    listTitleElement.innerText = selectedList.name;
+    renderTaskCount(selectedList);
+  }
+};
+
+let renderTaskCount = selectedList => {
+  const incompleteItemCount = selectedList.tasks.filter(task => !task.complete)
+    .length;
+    const itemString = incompleteItemCount === ? "task": 'tasks';
+    listCountElement.innerText = `${incompleteItemCount} ${tasksString} remaining`
+};
+
+let renderList = () => {
   lists.forEach(list => {
     const listElement = document.createElement("li");
     listElement.dataset.listId = list.id;

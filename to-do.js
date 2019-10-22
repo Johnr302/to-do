@@ -77,7 +77,7 @@ let renderTaskCount = selectedList => {
   listCountElement.innerText = `${incompleteItemCount} ${tasksString} remaining`;
 };
 
-let renderList = () => {
+let renderLists = () => {
   lists.forEach(list => {
     const listElement = document.createElement("li");
     listElement.dataset.listId = list.id;

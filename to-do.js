@@ -8,6 +8,7 @@ const listDisplayContainer = document.querySelector(
 const listTitleElement = document.querySelector("[data-list-title]");
 const listCountElement = document.querySelector("[data-task-count]");
 const itemsContainer = document.querySelector("[data-items]");
+const itemsTemplate = document.getElementById("items-template");
 
 const LOCAL_STORAGE_LIST_KEY = "tasks.list";
 let selectedList = (LOCAL_SELECTED_LIST_ID_KEY = "task.selectedListId");
@@ -67,7 +68,24 @@ let render = () => {
     listDisplayContainer.style.display = "";
     listTitleElement.innerText = selectedList.name;
     renderTaskCount(selectedList);
+    clearElement(itemsContainer);
+    renderLists(selectedList);
   }
+};
+
+let renderTasks = selectedList => {
+  selectedList.tasks.forEach(task => {
+    const taskElement = document.importNode(
+      itemsTemplate.contentEditable,
+      true
+    );
+    const checkbox = (taskElement = taskElement.querySelector("input"));
+    checkbox.id = task.complete;
+    const label = taskElement.querySelector("label");
+    label.htmlFor = items.id;
+    label.append(items.name);
+    itemsContainer.appendChild(taskElement);
+  });
 };
 
 let renderTaskCount = selectedList => {

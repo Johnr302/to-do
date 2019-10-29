@@ -79,12 +79,12 @@ let render = () => {
 
 let renderTasks = (selectedList)=>{
   selectedList.tasks.forEach(task =>{
-    const taskElement = document.importNode(itemsTemplate.contentEditable, true)
+    const taskElement = document.importNode(itemsTemplate.content, true)
     const checkbox = taskElement = taskElement. querySelector('input');
-    checkbox.id = task.complete;
+    checkbox.id = task.id;
     const label = taskElement.querySelector('label');
     label.htmlFor = items.id;
-    label.append(items.name)
+    label.append(item.name)
     itemsContainer.appendChild(taskElement);
   }); 
 };

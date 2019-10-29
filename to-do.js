@@ -84,7 +84,7 @@ let renderTasks = (selectedList)=>{
     checkbox.id = task.id;
     const label = taskElement.querySelector('label');
     label.htmlFor = items.id;
-    label.append(item.name)
+    label.append(items.name)
     itemsContainer.appendChild(taskElement);
   }); 
 };

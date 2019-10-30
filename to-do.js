@@ -42,7 +42,7 @@ let createList = name => {
   return {
     id: Date.now().toString(),
     name: name,
-    tasks: [{}]
+    tasks: []
   };
 };
 
@@ -69,7 +69,7 @@ let render = () => {
     listTitleElement.innerText = selectedList.name;
     renderTaskCount(selectedList);
     clearElement(itemsContainer);
-    renderLists(selectedList);
+    renderTasks(selectedList);
   }
 };
 
@@ -78,7 +78,7 @@ let renderTasks = selectedList => {
     const taskElement = document.importNode(itemsTemplate.content, true);
     const checkbox = (taskElement = taskElement.querySelector("input"));
     checkbox.id = task.id;
-    checkbox.id = task.complete;
+    checkbox.checked = task.complete;
     const label = taskElement.querySelector("label");
     label.htmlFor = items.id;
     label.append(items.name);

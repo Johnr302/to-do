@@ -42,11 +42,7 @@ let createList = name => {
   return {
     id: Date.now().toString(),
     name: name,
-    tasks: [{
-      id = "cve", 
-      name: "Pjohn", 
-      complete: false 
-    }]
+    tasks: [{}]
   };
 };
 
@@ -77,17 +73,17 @@ let render = () => {
   }
 };
 
-let renderTasks = (selectedList)=>{
-  selectedList.tasks.forEach(task =>{
-    const taskElement = document.importNode(itemsTemplate.content, true)
-    const checkbox = taskElement = taskElement. querySelector('input');
+let renderTasks = selectedList => {
+  selectedList.tasks.forEach(task => {
+    const taskElement = document.importNode(itemsTemplate.content, true);
+    const checkbox = (taskElement = taskElement.querySelector("input"));
     checkbox.id = task.id;
-    checkbox.id = task.complete
-    const label = taskElement.querySelector('label');
+    checkbox.id = task.complete;
+    const label = taskElement.querySelector("label");
     label.htmlFor = items.id;
-    label.append(items.name)
+    label.append(items.name);
     itemsContainer.appendChild(taskElement);
-  }); 
+  });
 };
 
 let renderTaskCount = selectedList => {

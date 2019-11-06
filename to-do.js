@@ -83,7 +83,7 @@ let render = () => {
   renderLists();
 
   const selectedList = lists.find(list => list.id === selectedListId);
-  if (selectedListId == null) {
+  if (selectedListId == null || selectedListId == "null") {
     listDisplayContainer.style.display = "none";
   } else {
     listDisplayContainer.style.display = "";

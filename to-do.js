@@ -9,6 +9,8 @@ const listTitleElement = document.querySelector("[data-list-title]");
 const listCountElement = document.querySelector("[data-task-count]");
 const itemsContainer = document.querySelector("[data-items]");
 const itemsTemplate = document.getElementById("items-template");
+const newItemForm = document.querySelector("[data-new-item-form]");
+const newItemInput = document.querySelector("[data-new-item-input]");
 
 const LOCAL_STORAGE_LIST_KEY = "tasks.list";
 let selectedList = (LOCAL_SELECTED_LIST_ID_KEY = "task.selectedListId");
@@ -38,11 +40,30 @@ newListForm.addEventListener("submit", e => {
   saveAndRender();
 });
 
+newItemForm.addEventListener("submit", e => {
+  e.preventDefault();
+  const taskName = newItemInput.value;
+  if (taskName == null || taskName === "") return;
+  const task = createItem(taskName);
+  newItemInput.value = null;
+  const selectedList = lists.find(list => list.id === selectedListId);
+  selectedList.tasks.push(task);
+  saveAndRender();
+});
+
 let createList = name => {
   return {
     id: Date.now().toString(),
     name: name,
     tasks: []
+  };
+};
+
+let createItem = name => {
+  return {
+    id: Date.now().toString(),
+    name: name,
+    complete: false
   };
 };
 

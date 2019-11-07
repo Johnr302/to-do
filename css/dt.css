@@ -20,7 +20,8 @@
 }
 body {
   background-color: rgb(25, 180, 220);
-  font-family: "ostrich_sansblack", Georgia, "Times New Roman", Times, serif;
+  font-family: "Arial", "ostrich_sansblack", Georgia, "Times New Roman", Times,
+    serif;
 
   /*display: grid;
     grid:
@@ -127,4 +128,8 @@ form {
 
 .active-list {
   color: red;
+}
+
+input:checked + label {
+  text-decoration-line: line-through;
 }

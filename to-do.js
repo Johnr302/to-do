@@ -14,6 +14,8 @@ const newItemInput = document.querySelector("[data-new-item-input]");
 const clearCompleteItemsButton = document.querySelector(
   "[data-clear-complete-tasks-button]"
 );
+const addItemBtn = document.getElementById("add-item-btn");
+const addListBtn = document.getElementById("new-list-btn");
 
 const LOCAL_STORAGE_LIST_KEY = "tasks.list";
 let selectedList = (LOCAL_SELECTED_LIST_ID_KEY = "task.selectedListId");
@@ -51,7 +53,7 @@ deleteListButton.addEventListener("click", e => {
   saveAndRender();
 });
 
-newListForm.addEventListener("submit", e => {
+const newListSubmit = e => {
   e.preventDefault();
   const listName = newListInput.value;
   if (listName == null || listName === "") return;
@@ -59,9 +61,13 @@ newListForm.addEventListener("submit", e => {
   newListInput.value = null;
   lists.push(list);
   saveAndRender();
-});
+};
 
-newItemForm.addEventListener("submit", e => {
+newListForm.addEventListener("submit", newListSubmit);
+
+addListBtn.addEventListener("click", newListSubmit);
+
+const newItemSubmit = e => {
   e.preventDefault();
   const taskName = newItemInput.value;
   if (taskName == null || taskName === "") return;
@@ -70,7 +76,11 @@ newItemForm.addEventListener("submit", e => {
   const selectedList = lists.find(list => list.id === selectedListId);
   selectedList.tasks.push(task);
   saveAndRender();
-});
+};
+
+newItemForm.addEventListener("submit", newItemSubmit);
+
+addItemBtn.addEventListener("click", newItemSubmit);
 
 let createList = name => {
   return {

@@ -14,9 +14,11 @@
     <div class="auto-fit">
       <div class="all-list-title">
         <ul class="task-title" data-lists></ul>
-        <button class="list-btn" aria-label="New List">+</button>
+        <button class="list-btn" id="new-list-btn" aria-label="New List">
+          +
+        </button>
 
-        <form action="" data-new-list-form>
+        <form data-new-list-form>
           <input
             type="text"
             class="new-list"
@@ -35,7 +37,9 @@
         <div class="todo-body">
           <div class="todo-items" data-items></div>
           <div class="new-items">
-            <button class="item-btn" aria-label="New Item">+</button>
+            <button class="item-btn" id="add-item-btn" aria-label="New Item">
+              +
+            </button>
             <form action="" data-new-item-form>
               <input
                 type="text"

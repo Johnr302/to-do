@@ -2,6 +2,7 @@ const listsContainer = document.querySelector("[data-lists]");
 const newListForm = document.querySelector("[data-new-list-form]");
 const newListInput = document.querySelector("[data-new-list-input]");
 const deleteListButton = document.querySelector("[data-delete-list-button]");
+const buttonDarkMode = document.querySelector("#btn-dark-mode")
 const listDisplayContainer = document.querySelector(
   "[data-list-display-container]"
 );
@@ -16,11 +17,19 @@ const clearCompleteItemsButton = document.querySelector(
 );
 const addItemBtn = document.getElementById("add-item-btn");
 const addListBtn = document.getElementById("new-list-btn");
+let toggleFlag = true;
 
 const LOCAL_STORAGE_LIST_KEY = "tasks.list";
 let selectedList = (LOCAL_SELECTED_LIST_ID_KEY = "task.selectedListId");
 let lists = JSON.parse(localStorage.getItem(LOCAL_STORAGE_LIST_KEY)) || [];
 let selectedListId = localStorage.getItem(LOCAL_SELECTED_LIST_ID_KEY);
+
+const toggleDarkMode = () => {
+  document.body.classList[toggleFlag ? "add" : "remove"]('dark-mode');
+  toggleFlag = !toggleFlag;
+};
+
+buttonDarkMode.addEventListener("click", toggleDarkMode);
 
 listsContainer.addEventListener("click", e => {
   if (e.target.tagName.toLowerCase() === "li") {

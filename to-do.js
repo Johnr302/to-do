@@ -25,6 +25,7 @@ let lists = JSON.parse(localStorage.getItem(LOCAL_STORAGE_LIST_KEY)) || [];
 let selectedListId = localStorage.getItem(LOCAL_SELECTED_LIST_ID_KEY);
 
 const toggleDarkMode = () => {
+  console.log('dark mode');
   document.body.classList[toggleFlag ? "add" : "remove"]('dark-mode');
   toggleFlag = !toggleFlag;
 };

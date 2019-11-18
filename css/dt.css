@@ -133,3 +133,16 @@ form {
 input:checked + label {
   text-decoration-line: line-through;
 }
+
+/* --------------------------- Dark Mode Styles ---------------- */
+.dark-mode {
+  background-color: rgb(47, 62, 66);
+}
+
+.dark-mode h1 {
+  color: #fff;
+}
+
+.dark-mode .list-btn {
+  border-color: #ADFF2F;
+}

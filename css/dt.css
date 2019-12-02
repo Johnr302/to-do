@@ -39,7 +39,8 @@ header {
 ul {
   list-style-type: none;
 }
-.all-list-title {
+.all-list-title,
+.list {
   /*grid-area: list-title;*/
   border: 1px solid greenyellow;
   box-sizing: border-box;
@@ -49,9 +50,10 @@ ul {
   padding-left: 5px;
   line-height: 1.7em;
   margin-bottom: 5px;
+  text-align: left;
 }
-.list {
-  /* grid-area: list; */
+/* .list {
+  // grid-area: list; 
   border: 1px solid white;
   box-sizing: border-box;
   width: 500px;
@@ -60,7 +62,7 @@ ul {
   padding-left: 5px;
   line-height: 1.7em;
   margin-bottom: 5px;
-}
+} */
 button {
   box-align: left;
   font-size: 15px;
@@ -83,6 +85,7 @@ footer {
 }
 .task-title {
   color: white;
+  padding: 5px;
 }
 form {
   display: inline;
@@ -137,12 +140,14 @@ input:checked + label {
 /* --------------------------- Dark Mode Styles ---------------- */
 .dark-mode {
   background-color: rgb(47, 62, 66);
+  color: white;
 }
 
 .dark-mode h1 {
   color: #fff;
 }
 
-.dark-mode .list-btn {
-  border-color: #ADFF2F;
+.dark-mode .list-btn,
+.dark-mode .item-btn {
+  border-color: #adff2f;
 }

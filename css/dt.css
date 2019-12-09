@@ -61,7 +61,7 @@ html {
 footer.page {
   font-family: system-ui;
   border: 0.5px solid rgba(0, 0, 0, 0.5);
-  background-color: gray;
+  background-color: white;
   position: relative;
   padding: 0px 5px 10px 5px;
   right: 5px;
@@ -69,7 +69,7 @@ footer.page {
   border-radius: 1em;
   font-size: x-small;
   margin-left: 5px;
-  color: white;
+  color: black;
 }
 .task-count {
   color: white;

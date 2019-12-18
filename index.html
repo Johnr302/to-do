@@ -12,59 +12,55 @@
       <h1>Pjohn's to do list.</h1>
       <button id="btn-dark-mode">Toggle Dark Mode</button>
     </header>
-    <main>
-      <div class="auto-fit">
-        <div class="all-list-title">
-          <ul class="task-title" data-lists></ul>
-          <button class="list-btn" id="new-list-btn" aria-label="New List">
-            +
+
+    <main class="auto-fit">
+      <header class="all-list-title">
+        <ul class="task-title" data-lists></ul>
+
+        <form data-new-list-form>
+          <input
+            type="text"
+            class="new-list"
+            data-new-list-input
+            placeholder="New list name"
+            aria-label="New list name"
+          />
+        </form>
+        <button class="list-btn" id="new-list-btn" aria-label="New List">
+          +
+        </button>
+      </header>
+      <section class="list" data-list-display-container>
+        <header class="todo-header">
+          <h1 class="list-title" data-list-title></h1>
+          <p class="task-count" data-task-count></p>
+        </header>
+        <ul class="todo-items" data-items></ul>
+        <form action="" data-new-item-form>
+          <input
+            type="text"
+            data-new-item-input
+            class="new-list"
+            placeholder="New item name"
+            aria-label="New item name"
+          />
+        </form>
+        <button class="item-btn" id="add-item-btn" aria-label="New Item">
+          +
+        </button>
+
+        <footer class="delete-items">
+          <button class="delete btn" data-clear-complete-tasks-button>
+            Clear complete items
           </button>
-
-          <form data-new-list-form>
-            <input
-              type="text"
-              class="new-list"
-              data-new-list-input
-              placeholder="New list name"
-              aria-label="New list name"
-            />
-          </form>
-        </div>
-        <div class="list" data-list-display-container>
-          <div class="todo-header">
-            <h2 class="list-title" data-list-title></h2>
-            <p class="task-count" data-task-count></p>
-          </div>
-
-          <div class="todo-body">
-            <div class="todo-items" data-items></div>
-            <div class="new-items">
-              <button class="item-btn" id="add-item-btn" aria-label="New Item">
-                +
-              </button>
-              <form action="" data-new-item-form>
-                <input
-                  type="text"
-                  data-new-item-input
-                  class="new-list"
-                  placeholder="New item name"
-                  aria-label="New item name"
-                />
-              </form>
-            </div>
-            <div class="delete-items">
-              <button class="delete btn" data-clear-complete-tasks-button>
-                Clear complete items
-              </button>
-              <button class="btn delete" data-delete-list-button>
-                Delete list
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
+          <button class="btn delete" data-delete-list-button>
+            Delete list
+          </button>
+        </footer>
+      </section>
     </main>
-    <footer>
+
+    <footer class="page">
       <p>Created by Pjohn with guidance of D48!</p>
       <address>
         Contact:
@@ -72,12 +68,10 @@
       </address>
     </footer>
     <template id="items-template">
-      <div class="items">
+      <li class="items">
         <input type="checkbox" />
-        <label>
-          <span class="custom-checkbox"></span>
-        </label>
-      </div>
+        <label> </label>
+      </li>
     </template>
   </body>
 </html>

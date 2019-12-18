@@ -19,28 +19,24 @@
   grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
 }
 body {
-  background-color: rgb(25, 180, 220);
   font-family: "Arial", "ostrich_sansblack", Georgia, "Times New Roman", Times,
     serif;
-
-  /*display: grid;
-    grid:
-      "header   header      header header" auto
-      ".        list-title  list   ." auto /
-      1fr minmax(100px, 300px) minmax(250px, 500px) 1fr;*/
+  color: #001f27;
 }
-
 header {
-  /* grid-area: header; */
-
   text-align: center;
-  color: rgba(0, 0, 0, 0.5);
+  color: rgba(0, 0, 0);
 }
 ul {
   list-style-type: none;
+  text-align: left;
 }
-.all-list-title {
-  /*grid-area: list-title;*/
+.list-title {
+  text-align: left;
+  color: white;
+}
+.all-list-title,
+.list {
   border: 1px solid greenyellow;
   box-sizing: border-box;
   width: 500px;
@@ -49,17 +45,9 @@ ul {
   padding-left: 5px;
   line-height: 1.7em;
   margin-bottom: 5px;
-}
-.list {
-  /* grid-area: list; */
-  border: 1px solid white;
-  box-sizing: border-box;
-  width: 500px;
-  margin-right: 5px;
-  border-radius: 15px;
-  padding-left: 5px;
-  line-height: 1.7em;
-  margin-bottom: 5px;
+  text-align: left;
+  background-color: #005c72;
+  color: white;
 }
 button {
   box-align: left;
@@ -70,20 +58,29 @@ html {
   padding-top: 25px;
   font-size: 1.2em;
 }
-footer {
+footer.page {
   font-family: system-ui;
   border: 0.5px solid rgba(0, 0, 0, 0.5);
-  background-color: gray;
+  background-color: white;
   position: relative;
   padding: 0px 5px 10px 5px;
   right: 5px;
   width: 260px;
   border-radius: 1em;
   font-size: x-small;
+  margin-left: 5px;
+  color: black;
 }
+.task-count {
+  color: white;
+  text-align: left;
+}
+
 .task-title {
   color: white;
+  padding: 5px;
 }
+
 form {
   display: inline;
 }
@@ -94,55 +91,63 @@ form {
   position: relative;
   border-radius: 10px;
   border-width: 2px;
-  border-color: black;
+  border-color: greenyellow;
   font-size: 0.6em;
   margin-left: 10px;
-  background-color: yellowgreen;
+  background-color: greenyellow;
 }
 .delete.btn {
   /* color: orange; */
   background-color: transparent;
   border: none;
+  color: greenyellow;
 }
 .delete.btn:active {
   color: white;
   transition: 1s;
 }
-/* .delete.btn:hover {
-  background-color: yellowgreen;
-  color: orange;
-} */
 
 .new-list:focus {
   outline: none;
 }
-.new-items {
-  /* font-size: 1em; */
-}
+
 .new-list {
-  /* border: solid black 2px; */
   border-radius: 1em;
   font-size: 0.7em;
   padding-left: 10px;
 }
 
 .active-list {
-  color: Black;
+  color: greenyellow;
 }
 
 input:checked + label {
   text-decoration-line: line-through;
 }
 
+footer.delete-items {
+  background-color: none;
+  border: none;
+}
+#btn-dark-mode {
+  background-color: transparent;
+  border: none;
+}
 /* --------------------------- Dark Mode Styles ---------------- */
 .dark-mode {
   background-color: rgb(47, 62, 66);
+}
+.dark-mode #btn-dark-mode {
+  background-color: transparent;
+  border: none;
+  color: white;
 }
 
 .dark-mode h1 {
   color: #fff;
 }
 
-.dark-mode .list-btn {
-  border-color: #ADFF2F;
+.dark-mode .list-btn,
+.dark-mode .item-btn {
+  border-color: #adff2f;
 }
